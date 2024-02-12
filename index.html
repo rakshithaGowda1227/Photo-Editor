@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo Editor</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.1/fabric.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <!-- <button class="file">Select a photo</button> -->
+        <input type="file" class="file" id="file">
+        <button class="save" id="download">Download</button>
+    </nav>
+    <div class="container">
+        <div class="image-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <div class="range">
+        <input type="range" id="brightness" value="100" min="0" max="200">
+        <input type="range" id="contrast" min="0" max="200" value="100">
+        <input type="range" id="saturation" min="0" max="200" value="100" >
+        <input type="range" id="hue" min="0" max="360" value="0">
+        <input type="range" id="blur" min="0" max="10" value="0">
+        <input type="range" id="shadow" min="0" max="100" value="0">
+        <input type="range" id="explore" min="0" max="100" value="0">
+
+    </div>
+
+
+
+
+    <div class="options">
+        <div class="icon" id="bight" onclick="brightnessHandler()">
+            <i class="fa fa-sun"></i>
+            <small>brightness</small>
+        </div>
+        <div class="icon" id="con" onclick="contrastHandler()">
+            <i class="fa fa-circle-half-stroke"></i>
+            <small>Contrast</small>
+        </div>
+        <div class="icon" id="sat" onclick="saturationHandler()">
+            <i class="fa-brand fa-slack"></i>
+            <small>Saturation</small>
+        </div>
+        <div class="icon" id="blu" onclick="blurHandler()">
+            <i class="fa-regular fa-eye"></i>
+            <small>Blur</small>
+        </div>
+        <div class="icon" id="hu" onclick="hueHandler()">
+            <i class="fa fa-sliders"></i>
+            <small>Hue</small>
+        </div>
+        <div class="icon" id="sha" onclick="shadowHandler()">
+            <i class="fa-brands fa-medium"></i>
+            <small>Shadow</small>
+        </div>
+        <div class="icon" id="exp" onclick="expHandler()">
+            <i class="fa-brands fa-codepen"></i>
+            <small>Explore</small>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

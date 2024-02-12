@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.file{
+    border: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #2727fb, #7B66FF);
+    color: #fff;
+    border-radius: 5px;
+}
+.file:hover, .save:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.save{
+    border: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #fb274a, #ff6680);
+    color: #fff;
+    border-radius: 5px;
+}
+.container{
+    background-color: #e3e3e3;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 15px;
+    min-height: 100px;
+    min-width: 100px;
+    justify-content: center;
+    border: 1px solid #b4b4b467;
+    border-radius: 10px;
+}
+.icon i{
+    font-size: 2rem;
+}
+.icon:hover{
+    /* background-color: #2727fb; */
+    background: linear-gradient(315deg, #FF4B91, #ff8eb9);
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+}
+
+input[type="range"]{
+    display: none;
+}
+.range{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
